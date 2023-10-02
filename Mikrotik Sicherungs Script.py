@@ -8,7 +8,7 @@ import shutil
 datum = datetime.datetime.now().strftime("%m-%Y")
 now = datetime.datetime.now()
 
-technik = r"T:\MikroTik\Backups_Mikrotik\Backups_Mikrotik" + '-' + datum
+technik = r"T:\MikroTik\Backups_Mikrotik\Backups_Mikrotik" + '-' + datum # Speicherort
 
 ## Versucht einen Ordner zu erstellen
 ## Falls dies scheitert Error message
@@ -19,7 +19,7 @@ try:
 except Exception as E1:
     print(now.strftime("%H:%M:%S") + ' Fehler beim erstellen des Ordners', E1)
 
-KI = r"T:\MikroTik\Backups_Mikrotik\_Script\Kundeninfos.csv"
+KI = r"T:\MikroTik\Backups_Mikrotik\_Script\Kundeninfos.csv" # Datei zum Auslesen
 
 with open(KI, "r") as f:
 
