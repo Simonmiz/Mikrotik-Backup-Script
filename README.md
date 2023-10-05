@@ -14,4 +14,4 @@ Spalte-5: Konfigname
 
 Die Variable technik ist der Speicherort + das ende ist der Ordner name und danach eine variable die Monat+Jahr als endung hinzufügt
 
-Das Script verbindet sich via den Infos die in der KI CSV gelisted sind zu Mikrotiks und tut die konfig mit dem export befehl exportieren und dann in eine neue datei kopiert und abspeichert mit dem Konfignamen aus der CSV mit Monat+Jahr dahinter und dann .rsc als datei endung.
+Das Script verbindet sich via den Infos die in der KI CSV gelisted sind zu Mikrotiks/Pattons und tut die konfig mit dem export/show running-config befehl des gräts exportieren und dann in eine neue datei kopiert und abspeichert mit dem Konfignamen aus der CSV mit Monat+Jahr dahinter und dann .rsc als datei endung.
