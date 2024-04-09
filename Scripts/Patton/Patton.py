@@ -15,12 +15,16 @@ cg = config.get
 
 outputfile = cg("PATTON", "save_location")
 folder_name = cg("PATTON", "folder_name")
-list_csv = cg("GENERAL", "lists")
+bytes_recv = cg("PATTON", "bytes_recv")
+list_name = cg("PATTON", "list_name")
+list_location = cg("GENERAL", "list_location")
 delimiter = cg("GENERAL", "delimiter")
+
+bytes_recv = int(bytes_recv)
 
 outputfile = f"{outputfile}/{folder_name}_{datum}"
 
-list_csv = f"{list_csv}/patton.csv"
+list_csv = f"{list_csv}/{list_name}"
 
 try:
     os.mkdir(outputfile)
@@ -65,7 +69,7 @@ try:
 
             sleep(10)
 
-            data = channel.recv(20480)
+            data = channel.recv(bytes_recv)
             output = data
 
             output = output.decode("utf-8")
