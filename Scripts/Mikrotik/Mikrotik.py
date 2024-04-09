@@ -15,12 +15,13 @@ cg = config.get
 
 ausgabe = cg("MIKROTIK", "save_location")
 folder_name = cg("MIKROTIK", "folder_name")
-list_csv = cg("GENERAL", "lists")
+list_name = cg("MIKROTIK", "list_name")
+list_location = cg("GENERAL", "list_location")
 delimiter = cg("GENERAL", "delimiter")
 
 ausgabe = f"{ausgabe}/{folder_name}_{datum}"
 
-list_csv = f"{list_csv}/mikrotik.csv"
+list_csv = f"{list_csv}/{list_name}"
 
 os.makedirs(ausgabe, exist_ok=True)
 os.chmod(ausgabe, 0o777)
