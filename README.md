@@ -1,18 +1,7 @@
-# Backupscript - Mikrotik & Patton
+# Backupscript - Mikrotik 
 
 Gestartet am 27.9.2023
 
-Eine CSV Datei wird benötigt die in der "list_cv" variable gelisted wird
+In eine CSV Datei listet man alle Mikrotiks auf die man verwaltet, anschließend verbindet sich der computer durch das Skript zu den geräten über SSH und exportiert die Konfiguration vom Mikrotik, den Speicherort von der Liste und den Output ort kann man in der config datei ändern (config/config.ini)
 
-CSV ist so aufgebaut
-
-Spalte-1: SSH-Hostip
-Spalte-2: SSH-Port
-Spalte-3: SSH-Benutzername
-Spalte-4: SSH-Passwort
-Spalte-5: Konfigname
-
-Die Variable für list_csv wird in der config gespeichert
-
-Das Script verbindet sich via den Infos die in der list_csv gelisted sind zu Mikrotiks/Pattons und tut die konfig mit dem export/show running-config befehl des Geräts exportieren,
-und dann in eine neue datei kopiert und abgespeichert mit dem Konfignamen aus der CSV mit Monat+Jahr dahinter und dann .rsc für Mikrotik u. .cfg für Pattons als datei endung.
+*Template(Vorlage) CSV ist inkludiert im Download!*
